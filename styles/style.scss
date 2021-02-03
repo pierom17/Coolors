@@ -9,59 +9,64 @@
 
 @import "global";
 
-.color h2{
-  cursor: pointer;
-  font-size: 2rem;
+.color {
+  height: 80vh;
+  @include flex(column, space-evenly, center);
+  flex: 1;
+  position: relative;
+  overflow: hidden;
 }
-
-.sliders{
-  position: absolute;
+.color h2 {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.sliders {
   display: flex;
   flex-direction: column;
+  position: absolute;
   bottom: 0%;
-  background: rgb(110, 87,87);
-  width: 80%;
+  background: rgb(255, 255, 255);
+  opacity: 0;
   padding: 1rem;
-  pointer-events: none;
+  width: 80%;
   border-top-right-radius: 1rem;
+  pointer-events: none;
   border-top-left-radius: 1rem;
-  // Adding an adjustment class
-  // transform: translateY(100px);
-  transition: all .5s ease-in-out;
+  /* We are adding an adjustemnt class */
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
 }
-
-.sliders.active{
+.sliders.active {
   opacity: 1;
   transform: translateY(0px);
   pointer-events: all;
 }
-
-.sliders button{
+.sliders button,
+.close-save,
+.close-library {
   position: absolute;
   top: 0;
   right: 0;
-  padding: .5rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  padding: 0.5rem;
   border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   border: none;
+  background: rgb(73, 73, 73);
   color: white;
   cursor: pointer;
-  background: rgb(73, 73, 73);
   font-weight: bold;
 }
-
-.controls{
+.controls {
   display: flex;
   flex-direction: column;
 }
-
-.panel{
-  @include flex(column, space-evenly, center);
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   height: 20vh;
 }
-
-.panel button{
+.panel button {
   font-size: 1.2rem;
   margin: 1rem;
   padding: 1rem 2rem;
@@ -71,7 +76,22 @@
   cursor: pointer;
   border-radius: 1rem;
 }
-
 .panel p {
   font-size: 1.2rem;
+}
+.library-panel,
+.generate-panel,
+.save-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adjust,
+.lock {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 2rem 0rem;
 }

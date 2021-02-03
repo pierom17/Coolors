@@ -24,10 +24,3 @@ path, i, svg{
   display: flex;
   color: rgb(212, 212, 212);
 }
-.color{
-  height: 80vh;
-  @include flex(column, space-evenly,center);
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-}

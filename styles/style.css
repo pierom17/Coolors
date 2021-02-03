@@ -51,12 +51,11 @@ path, i, svg {
 }
 
 .color h2 {
-  cursor: pointer;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .sliders {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,15 +63,20 @@ path, i, svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: absolute;
   bottom: 0%;
-  background: #6e5757;
-  width: 80%;
+  background: white;
+  opacity: 0;
   padding: 1rem;
-  pointer-events: none;
+  width: 80%;
   border-top-right-radius: 1rem;
+  pointer-events: none;
   border-top-left-radius: 1rem;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  /* We are adding an adjustemnt class */
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .sliders.active {
@@ -82,18 +86,19 @@ path, i, svg {
   pointer-events: all;
 }
 
-.sliders button {
+.sliders button,
+.close-save,
+.close-library {
   position: absolute;
   top: 0;
   right: 0;
-  padding: .5rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  padding: 0.5rem;
   border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   border: none;
+  background: #494949;
   color: white;
   cursor: pointer;
-  background: #494949;
   font-weight: bold;
 }
 
@@ -111,16 +116,12 @@ path, i, svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 20vh;
 }
 
@@ -137,5 +138,29 @@ path, i, svg {
 
 .panel p {
   font-size: 1.2rem;
+}
+
+.library-panel,
+.generate-panel,
+.save-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adjust,
+.lock {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 2rem 0rem;
 }
 /*# sourceMappingURL=style.css.map */
