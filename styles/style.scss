@@ -8,3 +8,70 @@
 
 
 @import "global";
+
+.color h2{
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.sliders{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0%;
+  background: rgb(110, 87,87);
+  width: 80%;
+  padding: 1rem;
+  pointer-events: none;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  // Adding an adjustment class
+  // transform: translateY(100px);
+  transition: all .5s ease-in-out;
+}
+
+.sliders.active{
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: all;
+}
+
+.sliders button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: rgb(73, 73, 73);
+  font-weight: bold;
+}
+
+.controls{
+  display: flex;
+  flex-direction: column;
+}
+
+.panel{
+  @include flex(column, space-evenly, center);
+  height: 20vh;
+}
+
+.panel button{
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: rgb(31, 33, 63);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.panel p {
+  font-size: 1.2rem;
+}
