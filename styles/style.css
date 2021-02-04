@@ -163,4 +163,13 @@ path, i, svg {
   cursor: pointer;
   margin: 2rem 0rem;
 }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
