@@ -8,6 +8,8 @@ const adjustButton = document.querySelectorAll(".adjust");
 const lockButton = document.querySelectorAll(".lock");
 const closeAdjustments = document.querySelectorAll(".close-adjustment");
 const sliderContainers = document.querySelectorAll(".sliders");
+const changeBtn = document.querySelector('.change-theme-btn');
+const body = document.querySelector("body");
 let initialColors;
 //This is for local storage
 let savedPalettes = [];
@@ -47,6 +49,10 @@ lockButton.forEach((button, index) => {
     lockLayer(e, index);
   });
 });
+
+changeBtn.addEventListener("click", () => {
+  changeTheme();
+})
 
 //Functions
 //Color Generator
@@ -324,6 +330,15 @@ function closeLibrary() {
   popup.classList.remove("active");
 }
 
+function changeTheme(){
+  body.classList.toggle("dark");
+  if(body.classList.contains("dark")){
+    body.style.backgroundColor = 'black';
+  }else{
+    body.style.backgroundColor = 'white';
+  }
+}
+
 function getLocal() {
   if (localStorage.getItem("palettes") === null) {
     //Local Palettes
@@ -377,3 +392,4 @@ function getLocal() {
 
 getLocal();
 randomColors();
+//TODO: 1) Add a delete button with a function for the palettes

@@ -75,9 +75,16 @@
   color: white;
   cursor: pointer;
   border-radius: 1rem;
+  &:active{
+    background-color: rgba(44, 44, 83, 0.959);
+  }
 }
 .panel p {
   font-size: 1.2rem;
+  background-color: rgba(245, 244, 244, 0.986);
+  border: none;
+  border-radius: 52px;
+  padding: 1rem;
 }
 .library-panel,
 .generate-panel,
@@ -211,5 +218,26 @@ input[type="range"] {
   color: white;
   &:active{
     background-color: rgb(88, 88, 88);
+  }
+}
+
+.change-theme{
+  position: relative;
+}
+.change-theme-btn{
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  transform: translate(-50%,-50%);
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  padding: 1rem;
+  &:active{
+    background-color: rgba(250, 244, 244, 0.918);
+  }
+  i{
+    pointer-events: none;
   }
 }

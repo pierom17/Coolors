@@ -136,8 +136,16 @@ path, i, svg {
   border-radius: 1rem;
 }
 
+.panel button:active {
+  background-color: rgba(44, 44, 83, 0.959);
+}
+
 .panel p {
   font-size: 1.2rem;
+  background-color: rgba(245, 244, 244, 0.986);
+  border: none;
+  border-radius: 52px;
+  padding: 1rem;
 }
 
 .library-panel,
@@ -331,5 +339,30 @@ input[type="range"] {
 
 .pick-palette-btn:active {
   background-color: #585858;
+}
+
+.change-theme {
+  position: relative;
+}
+
+.change-theme-btn {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.change-theme-btn:active {
+  background-color: rgba(250, 244, 244, 0.918);
+}
+
+.change-theme-btn i {
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */
